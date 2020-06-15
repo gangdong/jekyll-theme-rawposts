@@ -43,57 +43,57 @@ rawposts is a free jekyll portfolio-style theme, which is designed to be as a st
 ------
 you can use the _config.yml file to configuration the features and contents on this theme. 
 
-#### Site personal settings
+#### `Site personal settings`
 You'll need to change the description, title and url to match with the project. You'll also need to replace the logo, default social and default offline images in the /assets/ directory with your own graphics.The email needs to be changed to the email you want to receive contact form enquirers with. 
 The default of this theme are my settings and just replace with yours.
-#### show_excerpts
+#### `show_excerpts`
 set to true to show excerpts on the homepage
-#### paginate
+#### `paginate`
 set the number of posts of each pages.
-#### paginate_path
+#### `paginate_path`
 set the path of pages in your site.
-#### sitemap
+#### `sitemap`
 set to true to generate sitemap.xml content
-#### dark_mode
+#### `dark_mode`
 set to true to add dark mode toggle
-#### reading_time
+#### `reading_time`
 set to true to add reading time statistics
-#### archives
+#### `archives`
 set to true to generate archives page 
-#### categories
+#### `categories`
 set to true to generate categories page
-#### gittalk
+#### `gittalk`
 set to true to add gittalk 
-#### show_statistics
+#### `show_statistics`
 set to true to show statistics of site visitors number
-#### rss
+#### `rss`
 set to true to add rss 
-#### source_code 
+#### `source_code` 
 set to true to add link to source code
 
 ### Include Files
 ------
 There are some necessary `.html` files for the site's features and they are in the different folders.
 
-#### index.html
+#### `index.html`
 index.html is the entry of homepage and is in the `/blog` folder.
 
-#### archives.html
+#### `archives.html`
 archives.html is for the archives function and is in the `/archives` folder.
 
-#### categories.html
+#### `categories.html`
 categories.html is used for category of the posts and is in the `/category` folder.
 
-#### about.html
+#### `about.html`
 for about content display and is in the `/about` folder.
 
-#### pagination.html
+#### `pagination.html`
 for paginate the pages and is in the `_includes` folder.
 
-#### reading_time.html
+#### `reading_time.html`
 reading_time.html is used for statistic the reading time of posts and display. it is in `_includes` folder.
 
-#### title.html
+#### `title.html`
 used for setting the menu bar of the homepage, is in the `_includes` folder.
 
 ### Development
