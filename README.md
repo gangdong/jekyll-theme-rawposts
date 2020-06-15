@@ -45,7 +45,7 @@ You can use the _config.yml file to configure the theme with your preferences.
 
 #### `site personal settings`
 You'll need to change the description, title and url to match with the project. You'll also need to replace the logo, default social and default offline images in the /assets/ directory with your own graphics.The email needs to be changed to the email you want to receive contact form enquirers with. 
-The default of this theme are my settings and just replace with yours.
+The default configuration of this theme are my personal information and just replace with yours.
 #### `show_excerpts`
 set to true to show excerpts on the homepage
 #### `paginate`
