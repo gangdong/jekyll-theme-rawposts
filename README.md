@@ -1,7 +1,7 @@
 # jekyll-theme-rawposts
 ### About
 ------
-rawposts is a free jekyll portfolio-style theme, which is designed to be as a starting point for any Jekyll website.
+rawposts is a free jekyll portfolio-style theme, which is designed to be as a starting point for any Jekyll website. This theme can be deployed on `Github Page`.
 
 `[Theme Author]`: David Dong  
 `[License]`: MIT License  
@@ -132,7 +132,6 @@ Welcome raise issues if you have any questions about this theme, not limited for
 <br/><br/>
 
 # 中文介绍
-------
 # Jekyll 主题 jekyll-theme-rawposts
 
 ### 关于该主题
