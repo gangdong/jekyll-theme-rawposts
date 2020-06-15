@@ -1,0 +1,75 @@
+title: Jekyll-theme-rawposts
+logo: BLOG # this name will be displayed on the title name of homepage
+author: David Dong
+email: dqdongg@hotmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  This is a free jekyll portfolio-style theme. Welcome to fork and use! 
+  
+show_excerpts: true # set to true to show excerpts on the homepage
+baseurl: '/daviddong.github.io'
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+# Pagination 
+paginate: 5
+paginate_path: "/blog/page:num/"
+rawposts:
+  name: David Dong
+  tagline: Java/C/C#/Python
+  date_format: "%b %-d, %Y"
+  sitemap: true # set to true to generate sitemap.xml content
+  dark_mode: true # set to true to add dark mode toggle
+  reading_time: true  # set to true to add reading time statistics
+  archives: true  # set to true to generate archives page 
+  categories: true  # set to true to generate categories page
+  #  disqus_shortname: games
+  gittalk: true  # set to true to add gittalk 
+  show_statistics: true  #set to true to show statistics of site visitors number
+  rss: true  #set to true to add rss 
+  source_code: true  #set to true to add link to source code
+  # generate social links in footer
+  social_links:
+    wechat: 
+    github:  gangdong
+    linkedIn: daviddong
+    rss: rss
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+theme: rawposts
+
+#rawposts:
+#  navigation:
+#    - title: My Work
+#      url: "/my-work"
+#    - title: Resume
+#      url: "/resume"
+
+plugins:
+  - jekyll-seo-tag
+  - jemoji
+#  - jekyll-feed

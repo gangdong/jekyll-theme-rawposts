@@ -1,0 +1,58 @@
+---
+layout: default
+title: Home
+---
+
+{% include title.html %}
+
+{%- if paginator.posts.size > 0 -%}  
+  <ul class= "post-container">
+    <li>
+      <h1 id="posts-label">posts</h1>
+    </li>
+	<!-- This loops through the paginated posts -->
+    {%- for post in paginator.posts -%}
+      <li>
+        {%- assign date_format = site.rawposts.date_format | default: "%b %-d, %Y" -%}
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <h2 class="post-title">{{ post.title | escape }}</h2>
+        </a>
+        <div class="post-meta">
+          <ul class="post-categories">
+            {%- for tag in post.categories -%}
+              <li>{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            {{ post.date | date: date_format }}</div>
+        </div>
+        <div class="post">
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </div>
+		{%- if site.rawposts.reading_time -%}
+		  {% include reading_time.html %}
+		{%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
+		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
+{%- endif -%}
+
+<div class="post-container">
+  <span class="post">
+    {% include pagination.html %}
+  </span>
+  <div class ="footer">
+    Copyright © {{ site.time | date: "%Y" }} {{ site.title }}  |  <a href = "https://github.com/gangdong/daviddong.github.io"> Github Project </a> powered by Jekyll
+   {%- if site.rawposts.show_statistics -%}
+   <div>
+     <span class="icon-user-1"> <span id="busuanzi_value_site_uv"></span> </span>
+   </div>
+   {%- endif -%}
+  </div>
+</div>
