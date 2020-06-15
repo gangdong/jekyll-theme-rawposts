@@ -41,9 +41,9 @@ rawposts is a free jekyll portfolio-style theme, which is designed to be as a st
 
 ### Customization & Configuration
 ------
-you can use the _config.yml file to configuration the features and contents on this theme. 
+You can use the _config.yml file to configure the theme with your preferences.
 
-#### `Site personal settings`
+#### `site personal settings`
 You'll need to change the description, title and url to match with the project. You'll also need to replace the logo, default social and default offline images in the /assets/ directory with your own graphics.The email needs to be changed to the email you want to receive contact form enquirers with. 
 The default of this theme are my settings and just replace with yours.
 #### `show_excerpts`
@@ -73,25 +73,25 @@ set to true to add link to source code
 
 ### Include Files
 ------
-There are some necessary `.html` files for the site's features and they are in the different folders.
+There are some necessary `.html` files for implementing the site's features and they are in the different folders.
 
 #### `index.html`
 index.html is the entry of homepage and is in the `/blog` folder.
 
-#### `archives.html`
-archives.html is for the archives function and is in the `/archives` folder.
+#### `archive.html`
+archive.html is for the archives function and is in the `/archive` folder.
 
-#### `categories.html`
-categories.html is used for category of the posts and is in the `/category` folder.
+#### `category.html`
+category.html is used for category of the posts and is in the `/category` folder.
 
 #### `about.html`
-for about content display and is in the `/about` folder.
+for *about* content display and is in the `/about` folder.
 
 #### `pagination.html`
 for paginate the pages and is in the `_includes` folder.
 
 #### `reading_time.html`
-reading_time.html is used for statistic the reading time of posts and display. it is in `_includes` folder.
+reading_time.html is used for statistic the reading time of posts and display. It is in `_includes` folder.
 
 #### `title.html`
 used for setting the menu bar of the homepage, is in the `_includes` folder.
@@ -118,7 +118,7 @@ When submitting a pull request:
 2. Create a branch off of master and give it a meaningful name (e.g. my-awesome-new-feature) and describe the feature or fix.
 3. Open a pull request on GitHub.
 
-Welcome to submitting pull requests to me, for any submitting, I will review as soon as possible and merge any good good submits.
+Welcome to submitting pull requests to me, for each submitting, I will review as soon as possible and merge any good submits.
 
 ### Version
 ------
