@@ -1,12 +1,12 @@
 # jekyll-theme-rawposts
 rawposts is a free jekyll portfolio-style theme, which is designed to be as a starting point for any Jekyll website.
 
-[Theme Author]: David Dong
-[License]: MIT License
+`[Theme Author]`: David Dong  
+`[License]`: MIT License  
 
 ![screenshot]({{site.baseurl}}/assets/screenshot.png)
 
-[theme demonstration](https://gangdong.github.io/daviddong.github.io/blog/index.html)
+### [Theme Demonstration](https://gangdong.github.io/daviddong.github.io/blog/index.html)  
 
 ### Features
 ------
@@ -111,6 +111,7 @@ To test the theme the locally as you make changes to it:
 This starts a Jekyll server using the theme's files and contents of the / directory. As modifications are made, refresh your browser to see any changes.
 
 ### Pull Requests
+------
 When submitting a pull request:
 
 1. Clone the repo.
@@ -120,10 +121,13 @@ When submitting a pull request:
 Welcome to submitting pull requests to me, for any submitting, I will review as soon as possible and merge any good good submits.
 
 ### Version
+------
 1.0.0
 
 ### Q & A
+------
 to be continued...
 
 ### Contact
+------
 Welcome raise issues if you have any questions about this theme, for usage, bug fix, new features requirements...
