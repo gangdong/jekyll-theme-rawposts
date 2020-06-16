@@ -1,17 +1,16 @@
 # jekyll-theme-rawposts
-### About
-------
+## About
 rawposts is a free jekyll portfolio-style theme, which is designed to be as a starting point for any Jekyll website. This theme can be deployed on `Github Page`.
 
-`[Theme Author]`: David Dong  
+`[Theme Author]`: [David Dong](https://github.com/gangdong)  
 `[License]`: MIT License  
 
+### Preview
 ![screenshot]({{site.baseurl}}/assets/screenshot.png)
 
 ### [Demonstration Site](https://gangdong.github.io/daviddong.github.io/blog/index.html)  
 
-### Features
-------
+## Features
 + Fully responsive
 + Optimized for tablets & mobiles
 + Pagination
@@ -25,24 +24,22 @@ rawposts is a free jekyll portfolio-style theme, which is designed to be as a st
 + jemoji for emoji
 + dark mode selectable
 
-### Plugins
-------
+## Plugins
 + jekyll-seo-tag
 + jemoji
 + kramdown
 + jekyll-archives
 + jekyll-paginate
 
-### Installation
-------
+## Installation
 1. Fork the theme at [here](https://github.com/gangdong/jekyll-theme-rawposts).
 2. Clone the repository to your local machine.
-3. Run the command `bundle install` in the root of project to install the theme and its dependencies.
-4. Run `bundle exec jekyll server` to build and serve your site.
-5. Done! :v:  Next you can customize your own website through the `_config.yml`
+3. If you don't have Jekyll installed, install it on your machine. If you don't know how to install, please refer to [Getting started with Jekyll (1)](https://gangdong.github.io/daviddong.github.io/web/2018/03/27/Web-jekyll-installation.html).
+4. Run the command `bundle install` in the root of project to install the theme and its dependencies.
+5. Run `bundle exec jekyll server` to build and serve your site.
+6. Done! :v:  Next you can customize your own website through the `_config.yml`
 
-### Customization & Configuration
-------
+## Customization & Configuration
 You can use the `_config.yml` file to configure the theme with your preferences.
 
 #### `site personal settings`
@@ -73,8 +70,7 @@ set to *true* to add rss.
 #### `source_code` 
 set to *true* to add link to source code.
 
-### Include Files
-------
+## Include Files
 There are some necessary `.html` files for implementing the site's features and they are in the different folders.
 
 #### `index.html`
@@ -98,8 +94,7 @@ reading_time.html is used for statistic the reading time of posts and display. I
 #### `title.html`
 Used for setting the menu bar of the homepage, is in the `_includes` folder.
 
-### Development
-------
+## Development
 To set up your environment to develop this theme:
 
 1. Clone this repo
@@ -112,8 +107,7 @@ To test the theme locally as you make changes to it:
 
 This starts a Jekyll server using the theme's files and contents of the / directory. As modifications are made, refresh your browser to see any changes.
 
-### Pull Requests
-------
+## Pull Requests
 When submitting a pull request:
 
 1. Clone the repo.
@@ -122,19 +116,17 @@ When submitting a pull request:
 
 Welcome to submitting pull requests to me, for each request, I will review as soon as possible and merge any good submits.
 
-### Version
-------
+## Version
 1.0.0
 
-### Q & A
-------
+## Q & A
 Welcome raise issues if you have any questions about this theme, not limited for any usage, bug fix, new features requirements... :smile:   
 <br/><br/>
 
-# 中文介绍
+
 # Jekyll 主题 jekyll-theme-rawposts
 
-### 关于该主题
+## 关于该主题
 rawposts 是一款轻量级,简洁快速的Jekyll主题。 该主题配置简单,你可以将它用于Jekeyll网站或者个人博客的构建。该主题可以被用于部署在`Github page`上。
 
 `[作者]：` [David Dong](https://github.com/gangdong)   
@@ -145,41 +137,38 @@ rawposts 是一款轻量级,简洁快速的Jekyll主题。 该主题配置简单
 
 ### [演示网站](https://gangdong.github.io/daviddong.github.io/blog/index.html)
 
-### 功能
-------
+## 功能
 + 响应式设计
 + 针对平板&手机屏幕设计优化
 + 分页功能
 + 归档
 + 文章分类
 + 评论模块：Gittalk
-+ 评论模块：Disqus 
-  中国大陆用户推荐使用Gittalk.
++ 评论模块：Disqus    
+  中国大陆用户推荐使用 Gittalk.
 + 统计模块：Google analytics
-+ 统计模块：busuanzi analytics
++ 统计模块：busuanzi analytics   
   中国大陆用户推荐使用 busuanzi analytics
 + rss
 + jemoji emoji表情支持
 + 两种模式可切换：浅色模式/深色模式
 
-### 应用插件
-------
+## 应用插件
 + jekyll-seo-tag
 + jemoji
 + kramdown
 + jekyll-archives
 + jekyll-paginate
 
-### 主题安装
-------
+## 主题安装
 1. fork [主题](https://github.com/gangdong/jekyll-theme-rawposts) 到你的github仓库。
 2. 复制该主题的仓库到本地。
-3. 在本地项目的根目录下运行命令 `bundle install` 来安装主题以及该主题的依赖。
-4. 运行 `bundle exec jekyll server` 构建项目并生成网站。
-5. 至此安装完成! :v: 下一步你需要通过配置 _config.yml来定制你自己的网站。
+3. 如果你还没有安装Jekell，请先安装Jekyll。如果你不知道如何安装Jekyll，可以参考 [Getting started with Jekyll (1)](https://gangdong.github.io/daviddong.github.io/web/2018/03/27/Web-jekyll-installation.html)。
+4. 在本地项目的根目录下运行命令 `bundle install` 来安装主题以及该主题的依赖。
+5. 运行 `bundle exec jekyll server` 构建项目并生成网站。
+6. 至此安装完成! :v: 下一步你需要通过配置 _config.yml来定制你自己的网站。
 
-### 客制化 & 配置
-------
+## 客制化 & 配置
 你可以通过配置 _config.yml 文件来客制化该主题。
 
 #### `客制化设定`
@@ -210,8 +199,7 @@ _config.yml中设置该字段为 `true` 将会启用rss生成功能。
 #### `source_code` 
 _config.yml中设置该字段为 `true` 将会增加源代码导引。
 
-### 包含文件
-------
+## 包含文件
 该主题有一些必要的 「.html」文件来实现网站的功能，它们位于不同的文件夹中。
 
 #### `index.html`
@@ -235,8 +223,7 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 #### `title.html`
 生成主页的功能菜单项, 存放在根目录 `_includes` 文件夹中。
 
-### 开发
-------
+## 开发
 以下用于配置该主题的开发环境:
 
 1. 复制该主题的仓库到本地；
@@ -247,8 +234,7 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 1. 进入到该主题本地的根目录 (比如 jekyll-theme-rawposts)；
 2. 运行 `jekyll server` 构建该项目并生成网站，在浏览器中打开http://localhost:4000/你设定的baseurl 来预览网站。再度修改后可以通过刷新网页来预览效果。
 
-### Pull Requests
-------
+## Pull Requests
 当你需要提交一个 pull request时，可以：
 
 1. 复制该项目；
@@ -257,11 +243,9 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 
 欢迎大家提 pull requests 给我, 对于每一个pull request, 我都会尽快review，对于好的建议我都会merge进该主题的代码中，包括但不限于提交问题或需求，修复代码等。
 
-### 版本
-------
+## 版本
 1.0.0
 
-### 问题和回答
-------
+## 问题和回答
 如果你有针对该主题的任何问题，欢迎提交Issue来交流，每个问题我都会认真回复。:smile: 
 <br/><br/>
