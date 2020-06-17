@@ -127,7 +127,7 @@ Welcome raise issues if you have any questions about this theme, not limited for
 # Jekyll 主题 jekyll-theme-rawposts
 
 ## 关于该主题
-rawposts 是一款轻量级,简洁快速的Jekyll主题。 该主题配置简单,你可以将它用于Jekeyll网站或者个人博客的构建。该主题可以被用于部署在`Github page`上。
+rawposts 是一款轻量级,风格简洁清新的Jekyll主题。 该主题配置简单并支持丰富的特性,你可以将它用于Jekeyll网站或者个人博客的构建。该主题可以被用于部署在`Github page`上。
 
 `[作者]：` [David Dong](https://github.com/gangdong)   
 `[协议]：` MIT
