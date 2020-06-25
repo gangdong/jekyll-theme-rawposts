@@ -19,13 +19,12 @@ rawposts is a free jekyll portfolio-style theme, which is designed to be as a st
 + Pagination
 + Archive by date
 + Archive by category
-+ Sitemap
 + Excerpts
 + Navigation
 + Comments: Gittalk / Disqus
-+ Google analytics
-+ busuanzi analytics
++ Statistics: Google analytics / busuanzi 
 + RSS
++ sitemap
 + jemoji for emoji
 + dark skin selectable
 + Reading time statistics
