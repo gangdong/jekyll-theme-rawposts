@@ -3,7 +3,7 @@
 rawposts is a free jekyll portfolio-style theme, which is designed to be as a starting point for any Jekyll website. This theme can be deployed on `Github Page`.
 
 `[Theme Author]`: [David Dong](https://github.com/gangdong)  
-`[License]`: MIT License  
+`[License]`: MIT  
 
 ### Preview
 ![screenshot]({{site.baseurl}}/assets/screenshot.png)
@@ -13,16 +13,23 @@ rawposts is a free jekyll portfolio-style theme, which is designed to be as a st
 ## Features
 + Fully responsive
 + Optimized for tablets & mobiles
++ portfolio style
++ Customized social link (Github,facebook,twitter,linkedin...)
++ Optimized Github code style
 + Pagination
-+ Archive posts
-+ Category posts
-+ Gittalk
-+ Disqus
++ Archive by date
++ Archive by category
++ Sitemap
++ Excerpts
++ Navigation
++ Comments: Gittalk / Disqus
 + Google analytics
 + busuanzi analytics
-+ rss
++ RSS
 + jemoji for emoji
-+ dark mode selectable
++ dark skin selectable
++ Reading time statistics
++ post words count statistics
 
 ## Plugins
 + jekyll-seo-tag
@@ -123,6 +130,11 @@ Welcome to submitting pull requests to me, for each request, I will review as so
 Welcome raise issues if you have any questions about this theme, not limited for any usage, bug fix, new features requirements... :smile:   
 <br/><br/>
 
+## Contribution
+The theme is generated based on [plainwhite](https://github.com/samarsault/plainwhite-jekyll), with a lot of modifications.
+
+## License
+The theme is available as open source under the terms of the MIT License.
 
 # Jekyll 主题 jekyll-theme-rawposts
 
@@ -140,18 +152,24 @@ rawposts 是一款轻量级,风格简洁清新的Jekyll主题。 该主题配置
 ## 功能
 + 响应式设计
 + 针对平板&手机屏幕设计优化
++ portfolio 主题图片设置
++ 个性化社交链接（支持电子邮件，Github，Facebook，Twitter，领英等）
 + 分页功能
 + 归档
 + 文章分类
-+ 评论模块：Gittalk
-+ 评论模块：Disqus    
++ 摘要
++ 优化Github风格的代码样式
++ 评论模块：Gittalk / Disqus    
   中国大陆用户推荐使用 Gittalk.
-+ 统计模块：Google analytics
-+ 统计模块：busuanzi analytics   
++ 阅读量统计：busuanzi
++ 站点统计：busuanzi / google analytics   
   中国大陆用户推荐使用 busuanzi analytics
-+ rss
++ RSS
++ Sitemap
 + jemoji emoji表情支持
-+ 两种模式可切换：浅色模式/深色模式
++ 两种皮肤可切换：浅色/深色
++ 文章字数统计
++ 阅读时间统计
 
 ## 应用插件
 + jekyll-seo-tag
@@ -249,3 +267,9 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 ## 问题和回答
 如果你有针对该主题的任何问题，欢迎提交Issue来交流，每个问题我都会认真回复。:smile: 
 <br/><br/>
+
+## 贡献
+主题基于 3-Jekyll 模板生成，做了大量的修改，增加了功能。
+
+## 协议
+该主题为开源软件，基于MIT协议。
