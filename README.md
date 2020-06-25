@@ -128,7 +128,6 @@ Welcome to submitting pull requests to me, for each request, I will review as so
 
 ## Q & A
 Welcome raise issues if you have any questions about this theme, not limited for any usage, bug fix, new features requirements... :smile:   
-<br/><br/>
 
 ## Contribution
 The theme is generated based on [plainwhite](https://github.com/samarsault/plainwhite-jekyll), with a lot of modifications.
@@ -266,10 +265,9 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 
 ## 问题和回答
 如果你有针对该主题的任何问题，欢迎提交Issue来交流，每个问题我都会认真回复。:smile: 
-<br/><br/>
 
 ## 贡献
-主题基于 3-Jekyll 模板生成，做了大量的修改，增加了功能。
+主题基于 [plainwhite](https://github.com/samarsault/plainwhite-jekyll) 模板生成，做了大量的修改，增加了功能。
 
 ## 协议
 该主题为开源软件，基于MIT协议。
