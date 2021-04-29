@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source "http://rubygems.org"
 gemspec
 group :jekyll_plugins do
     gem 'jekyll-feed'
@@ -13,4 +13,6 @@ group :jekyll_plugins do
     gem 'kramdown'
 	gem 'jemoji'
     gem 'rouge'
+	gem 'jekyll-toc'
+	gem 'jekyll-tagging-related_posts'
 end

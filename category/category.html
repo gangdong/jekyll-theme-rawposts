@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: extension
 title: Categories
 permalink: /category
 ---
@@ -7,12 +7,21 @@ permalink: /category
 <!-- Begin List Posts
 ================================================== -->
 
-{% include title.html %}
+{% include menu.html %}
 
 <div class="post-container">
-<h1 id="posts-label">{{page.title}}</h1>
+<li class="posts-labelgroup" id="posts-labelgroup">
+	<h1 id="posts-label">{{page.title}}</h1>
+    <!-- Put search box here -->
+    <div class="search-container">
+        <div class="search-section">
+          <i class="icon-search"></i>
+          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
+        </div>
+        <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
+    </div>
+</li>
 <div class ="archive">	
-
 {% comment %}calculate the post count for each category{% endcomment %}
 {% assign count = "" %}
 {% assign counts = "" %}
@@ -25,38 +34,69 @@ permalink: /category
 {% endfor %}
 
 {% comment %}show navigation label here{% endcomment %}
-<div class="archive-label-meta" style ="margin-top:25px">
+<div class="signboard-meta">
 {% assign i = 0 %}
 {% assign counts = counts | split: ', ' %}
 {% for tag in site.categories reversed  %}
-<ul class="post-categories">       
-     <a href="#{{tag[0]}}" style = "font-family: Raleway,Arial,sans-serif; font-size:14px">{{ tag[0] }} ( {{counts[i]}} )</a>
-</ul>
+{% comment %}convert a string to number{% endcomment %}
+{% assign number = counts[i] | plus:0 %}
+{% if number > 10 %}
+<div class="signboard signboard-tag tag-label-red">       
+     <a href="#{{tag[0]}}" style = "font-family: Raleway,Arial,sans-serif; font-size:14px">{{ tag[0] }}<span>{{counts[i]}}</span></a>
+</div>
+{% elsif number < 5 %}
+<div class="signboard signboard-tag tag-label-orange">       
+     <a href="#{{tag[0]}}" style = "font-family: Raleway,Arial,sans-serif; font-size:14px">{{ tag[0] }}<span>{{counts[i]}}</span></a>
+</div>
+{% else %}
+<div class="signboard signboard-tag tag-label-pink">       
+     <a href="#{{tag[0]}}" style = "font-family: Raleway,Arial,sans-serif; font-size:14px">{{ tag[0] }}<span>{{counts[i]}}</span></a>
+</div>
+{% endif %}
 {% assign i = i | plus: 1 %}
 {% endfor %}
 </div>
-
+{% assign j = 0 %}
 {% comment %}list post link for each category{% endcomment %}
 {% for tag in site.categories reversed %}
 <div>
-<h3 id = "{{tag[0]}}" class="archive-title">{{tag[0]}}</h3>
+<div id = "{{tag[0]}}" class="extension-title">#&nbsp;{{tag[0]}}</div>
 {% for post in tag[1] %}
-{%- assign date_format = site.rawposts.date_format | default: "%b %-d, %Y" -%}
-    <div class="category-meta" style="margin-left:15px; line-height: 16px">
-      <a class="post-link" href="{{ post.url | relative_url }}">
-		<h2 class="archive-link" >&bull; {{ post.title | escape }}</h2>
-      </a>
-        <div class="post-date">
-          <span class="icon-calendar" style = "font-size:16px">
-            {{ post.date | date: date_format }}</span>
+	{% if j == 0 %}
+	   {% assign j = j | plus: 1 %}
+	{% else %}
+	   {% assign j = j | minus: 1 %}
+	{% endif %}
+	
+	{% if j == 0 %}
+    <div class="category-meta extension-background">
+		<a class="post-link" href="{{ post.url | relative_url }}">
+		<h2 class="link" >&bull; {{ post.title | escape }}</h2>
+		</a>
+        <div class="post-date extension-post-date">
+          <span class="icon-calendar">
+            {{ post.date | date: "%b %-d, %Y" }}</span>
+		</div>
+	</div>
+	{% else %}
+	<div class="category-meta">
+		<a class="post-link" href="{{ post.url | relative_url }}">
+		<h2 class="link" >&bull; {{ post.title | escape }}</h2>
+		</a>
+        <div class="post-date extension-post-date">
+          <span class="icon-calendar">{{ post.date | date: "%b %-d, %Y" }}</span>
 		</div>
     </div>
+	{% endif %}
 {% endfor %}
 </div>
 {% endfor %}
 </div>
 {% comment %}footer{% endcomment %}
-<div class ="footer" style="margin-top:30px">
-Copyright © {{ site.time | date: "%Y" }} {{ site.title }}  |  <a href = "https://github.com/gangdong/daviddong.github.io"> Github Project </a> powered by Jekyll
+{% include footer.html %}
+<br>
 </div>
-</div>
+{% if site.rawposts.search %}
+	<script async src="{{site.cdn_baseurl}}/assets/js/simple-jekyll-search.min.js"></script>
+	<script async src="{{site.cdn_baseurl}}/assets/js/search.js"></script>
+{% endif %}
