@@ -6,9 +6,9 @@ rawposts is a free jekyll portfolio-style theme, which is designed to be as a st
 `[License]`: MIT  
 
 ### Preview
-![screenshot]({{site.baseurl}}/assets/screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/screenshot.png)
 
-### [Demonstration Site](https://gangdong.github.io/daviddong.github.io/blog/index.html)  
+### [Demonstration Site](https://dqdongg.com)  
 
 ## Features
 + Fully responsive
@@ -143,9 +143,9 @@ rawposts 是一款轻量级,风格简洁清新的Jekyll主题。 该主题配置
 `[协议]：` MIT
 
 ### 预览
-![screenshot]({{site.baseurl}}/assets/screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/screenshot.png)
 
-### [演示网站](https://gangdong.github.io/daviddong.github.io/blog/index.html)
+### [演示网站](https://dqdongg.com)
 
 ## 功能
 + 响应式设计
