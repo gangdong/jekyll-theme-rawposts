@@ -123,6 +123,12 @@
 			}
 		}
 	}
+	.about-page {
+		span {
+			color: #DC143C;
+			background-color: #272727;
+		}
+	}
 	.separator {
 		border-bottom: 1px solid $dark_separator_color;
 	}

@@ -153,7 +153,8 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 在你对该主题做了修改后可以在本地测试然后再推送到远端:
 
 1. 进入到该主题本地的根目录 (比如 jekyll-theme-rawposts)；
-2. 运行 `jekyll server` 构建该项目并生成网站，在浏览器中打开http://localhost:4000/你设定的baseurl 来预览网站。再度修改后可以通过刷新网页来预览效果。
+2. 运行 `jekyll server` 构建该项目并生成网站，在浏览器中打开 `http://localhost:4000/你设定的baseurl` 来预览网站。再度修改后可以通过刷新网页来预览效果。
+   如果想要看主题的默认效果，链接路径为 `http://localhost:4000/blog/index.html` 
 
 ### <span id = "6.2">6.2 Pull Requests</span>
 当你需要提交一个 pull request时，可以：

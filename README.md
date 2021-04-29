@@ -1,83 +1,272 @@
-# This is David's Blog | 董刚的博客
+# jekyll-theme-rawposts
+## About
+rawposts is a free jekyll portfolio-style theme, which is designed to be as a starting point for any Jekyll website. This theme can be deployed on `Github Page`.
 
-[![Build Status](https://travis-ci.com/gangdong/gangdong.github.io.svg?branch=dev)](https://travis-ci.com/gangdong/gangdong.github.io)
+`[Theme Author]`: [David Dong](https://github.com/gangdong)  
+`[License]`: MIT  
 
-> 关于程序与设计 & 生活与分享 | 这里是 董刚 的个人博客，让我们一起发现更多。
-<br>
+### Preview
+![screenshot]({{site.baseurl}}/assets/screenshot.png)
 
-## 目录
+### [Demonstration Site](https://gangdong.github.io/daviddong.github.io/blog/index.html)  
 
-+ [[中文]](#[中文]) 
-    + [效果预览](#效果预览)
-    + [在线预览](#在线预览)
-    + [关于本站](#关于本站)
-    + [rawposts 主题](#rawposts-主题)
-+ [[English]](#[English])
-    + [Live Demo](#Live-Demo)
-    + [About this site](#About-this-site)
-    + [rawpost theme](#rawpost-theme)
+## Features
++ Fully responsive
++ Optimized for tablets & mobiles
++ portfolio style
++ Customized social link (Github,facebook,twitter,linkedin...)
++ Optimized Github code style
++ Pagination
++ Archive by date
++ Archive by category
++ Excerpts
++ Navigation
++ Comments: Gittalk / Disqus
++ Statistics: Google analytics / busuanzi 
++ RSS
++ sitemap
++ jemoji for emoji
++ dark skin selectable
++ Reading time statistics
++ post words count statistics
 
+## Plugins
++ jekyll-seo-tag
++ jemoji
++ kramdown
++ jekyll-archives
++ jekyll-paginate
 
-### [中文]
+## Installation
+1. Fork the theme at [here](https://github.com/gangdong/jekyll-theme-rawposts).
+2. Clone the repository to your local machine.
+3. If you don't have Jekyll installed, install it on your machine. If you don't know how to install, please refer to [Getting started with Jekyll (1)](https://gangdong.github.io/daviddong.github.io/web/2018/03/27/Web-jekyll-installation.html).
+4. Run the command `bundle install` in the root of project to install the theme and its dependencies.
+5. Run `bundle exec jekyll server` to build and serve your site.
+6. Done! :v:  Next you can customize your own website through the `_config.yml`
 
-### 效果预览
-![blog](https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/screenshot.png)
-<br>
+## Customization & Configuration
+You can use the `_config.yml` file to configure the theme with your preferences.
 
-### 在线预览
+#### `site personal settings`
+You'll need to change the `description`, `title` and `url` to match with your personal information. You'll also need to replace the `logo`, default `social` and default offline `images` in the /assets/ directory with your owns.The email needs to be changed to the email you want to receive contact form enquirers with. 
+The default configuration of this theme is my personal information and just replace with yours.
+#### `show_excerpts`
+set to *true* to show excerpts on the homepage.
+#### `paginate`
+set the number of posts of each pages.
+#### `paginate_path`
+set the path of pages in your site.
+#### `sitemap`
+set to *true* to generate sitemap.xml content.
+#### `dark_mode`
+set to *true* to add dark mode toggle.
+#### `reading_time`
+set to *true* to add reading time statistics.
+#### `archives`
+set to *true* to generate archives page. 
+#### `categories`
+set to *true* to generate categories page.
+#### `gittalk`
+set to *true* to add gittalk. 
+#### `show_statistics`
+set to *true* to show statistics of site visitors number.
+#### `rss`
+set to *true* to add rss.
+#### `source_code` 
+set to *true* to add link to source code.
 
-[在线预览->](https://dqdongg.com)
-<br>
+## Include Files
+There are some necessary `.html` files for implementing the site's features and they are in the different folders.
 
-### 关于本站
+#### `index.html`
+index.html is the entry of homepage and is in the `/blog` folder.
 
-这个博客浓缩了我工作中的点滴积累，通过博客，我可以记录下自己的生活和成长的轨迹。更重要的是可以将一些知识分享给更多的人，同时也能够激励我不断的学习和提高。<br>
+#### `archive.html`
+archive.html is for the archives function and is in the `/archive` folder.
 
-工作之外，我最大的爱好是旅游，
-> “行万里路，阅尽世间风土人情，方能真正的理解这个世界，认清自我”
+#### `category.html`
+category.html is used for category of the posts and is in the `/category` folder.
 
-一些路途中发生的有趣故事和精彩的照片我全部都收录在<a href = "https://rainbow-ux.github.io/traveler-blog.github.io/">「我的相册」</a>中。<br>
+#### `about.html`
+For *about* page contents display and is in the `/about` folder.
 
-相遇即是缘分，如果你恰好看到这个博客，如果你有兴趣与我建立联系，还可以通过以下方式：<br>
+#### `pagination.html`
+For paginate the pages and is in the `_includes` folder.
 
-[Github homepage](https://github.com/gangdong/) | [LinkedIn](https://www.linkedin.com/in/刚-董-25208ba0/)
-<br>
+#### `reading_time.html`
+reading_time.html is used for statistic the reading time of posts and display. It is in `_includes` folder.
 
-### rawpost 主题
+#### `title.html`
+Used for setting the menu bar of the homepage, is in the `_includes` folder.
 
-这个博客通过 <a href = "https://jekyllrb.com/">Jekyll</a> 生成，部署在 Github Pages，基于 <a href = "https://github.com/gangdong/jekyll-theme-rawposts">rawposts</a> 主题。<br>
+## Development
+To set up your environment to develop this theme:
 
-`rawposts` 是我自己开发的一个主题，最初来源于一个 Github 上的项目 <a href = "https://github.com/samarsault/plainwhite-jekyll">plainwhite</a>。 我在之上做了大量开发，逐渐形成了这个主题。这个博客之上留有一系列的文章介绍这个主题是如何创建生成的，并分享了这个过程中的一些知识和经验。感兴趣的可以浏览相关的帖子。<br><br>
+1. Clone this repo
+2. cd into the root directory of your repo and run `bundle install`.
 
-欢迎 fork 并使用, 如果对该主题模板有任何建议或改进，可以通过 Issues 或者提 PR 给我。
+To test the theme locally as you make changes to it:
 
-### [English]
-<h1 style = "margin-bottom: 0; padding:0; font-size:32px; font-weight:bold"> This is David's Blog | 董刚的博客</h1>
+1. cd into the root directory of the repo (e.g. jekyll-theme-rawposts).
+2. Run `jekyll server` to preview and open your browser to `http://localhost:4000/your_baserul/`.
 
-[![Build Status](https://travis-ci.com/gangdong/gangdong.github.io.svg?branch=dev)](https://travis-ci.com/gangdong/gangdong.github.io)
+This starts a Jekyll server using the theme's files and contents of the / directory. As modifications are made, refresh your browser to see any changes.
 
-> This is David Dong's blog. It's about program & design, life & sharing. Let's explore more together. | David，Software，Developer.Designer
-<br>
+## Pull Requests
+When submitting a pull request:
 
-### Live Demo
+1. Clone the repo.
+2. Create a branch off of master and give it a meaningful name (e.g. my-awesome-new-feature) and describe the feature or fix.
+3. Open a pull request on GitHub.
 
-[Demo->](https://dqdongg.com)
-<br>
+Welcome to submitting pull requests to me, for each request, I will review as soon as possible and merge any good submits.
 
-### About this site
+## Version
+1.0.0
 
-It's about program & design, life & sharing. Let's explore more together. | David，Software，Developer.Designer 
+## Q & A
+Welcome raise issues if you have any questions about this theme, not limited for any usage, bug fix, new features requirements... :smile:   
 
-Here I write about what ever is on my mind, which tends to be related to designing and programming, since that’s what I do and I really enjoy helping people discover new skills and ideas.<br>
-  
-Outside of work, my main interest is travel. I love to explore all kinds of landscape and experience different custom around the world. I have some interesting stories about my travel and 📹 some beautiful photos, which has been collected into my <a href = "https://rainbow-ux.github.io/traveler-blog.github.io/">Album</a>.<br>
+## Contribution
+The theme is generated based on [plainwhite](https://github.com/samarsault/plainwhite-jekyll), with a lot of modifications.
 
-If you're interested in contacting me, feel free to send an <a href = "mailto:dqdongg@hotmail.com"> Email</a> to me. You can also find me on <a href = "https://www.linkedin.com/in/刚-董-25208ba0/">Linkin</a>, which I check often as well.<br>
-<br>
+## License
+The theme is available as open source under the terms of the MIT License.
 
-### rawpost theme
-It is built by <a href = "https://jekyllrb.com/">Jekyll</a> and deployed on GitHub Pages, based on the <a href = "https://github.com/gangdong/jekyll-theme-rawposts">rawposts</a> theme. I wrote the theme by myself on the basis of <a href = "https://github.com/samarsault/plainwhite-jekyll">plainwhite</a>, there is a series of posts on this blog explain how the blog was created and the theme was made. You can view them if you are interested.<br><br> 
+# Jekyll 主题 jekyll-theme-rawposts
 
-Welcome fork and use, if you have any suggestion or improvement for this theme, please raise issues or PR to me.
-<br><br><br>
+## 关于该主题
+rawposts 是一款轻量级,风格简洁清新的Jekyll主题。 该主题配置简单并支持丰富的特性,你可以将它用于Jekeyll网站或者个人博客的构建。该主题可以被用于部署在`Github page`上。
 
+`[作者]：` [David Dong](https://github.com/gangdong)   
+`[协议]：` MIT
+
+### 预览
+![screenshot]({{site.baseurl}}/assets/screenshot.png)
+
+### [演示网站](https://gangdong.github.io/daviddong.github.io/blog/index.html)
+
+## 功能
++ 响应式设计
++ 针对平板&手机屏幕设计优化
++ portfolio 主题图片设置
++ 个性化社交链接（支持电子邮件，Github，Facebook，Twitter，领英等）
++ 分页功能
++ 归档
++ 文章分类
++ 摘要
++ 优化Github风格的代码样式
++ 评论模块：Gittalk / Disqus    
+  中国大陆用户推荐使用 Gittalk.
++ 阅读量统计：busuanzi
++ 站点统计：busuanzi / google analytics   
+  中国大陆用户推荐使用 busuanzi analytics
++ RSS
++ Sitemap
++ jemoji emoji表情支持
++ 两种皮肤可切换：浅色/深色
++ 文章字数统计
++ 阅读时间统计
+
+## 应用插件
++ jekyll-seo-tag
++ jemoji
++ kramdown
++ jekyll-archives
++ jekyll-paginate
+
+## 主题安装
+1. fork [主题](https://github.com/gangdong/jekyll-theme-rawposts) 到你的github仓库。
+2. 复制该主题的仓库到本地。
+3. 如果你还没有安装Jekell，请先安装Jekyll。如果你不知道如何安装Jekyll，可以参考 [Getting started with Jekyll (1)](https://gangdong.github.io/daviddong.github.io/web/2018/03/27/Web-jekyll-installation.html)。
+4. 在本地项目的根目录下运行命令 `bundle install` 来安装主题以及该主题的依赖。
+5. 运行 `bundle exec jekyll server` 构建项目并生成网站。
+6. 至此安装完成! :v: 下一步你需要通过配置 _config.yml来定制你自己的网站。
+
+## 客制化 & 配置
+你可以通过配置 _config.yml 文件来客制化该主题。
+
+#### `客制化设定`
+你需要更改`描述`、`标题`和`url`以便与个人信息匹配。你还需要将/assets/目录中的`logo`、`默认社交链接`和`默认avatar图像`替换为您自己的图片，并需要将`电子邮件`更改为您要接收的联系人表单查询的电子邮件。
+当前此主题的模板中的默认配置为我个人的信息，将该部分替换为你自己的信息。
+#### `show_excerpts`
+_config.yml中设置该字段为 `true` 将会启用目录的摘要功能。
+#### `paginate`
+_config.yml中通过设置该字段来设定每页最大的文章数量。
+#### `paginate_path`
+_config.yml中设置该字段为你需要放置子页的路径。
+#### `sitemap`
+_config.yml中设置该字段为 `true` 将生成 sitemap.html 文件。
+#### `dark_mode`
+_config.yml中设置该字段为 `true` 将会启用网站的深色模式切换功能。
+#### `reading_time`
+_config.yml中设置该字段为 `true` 将会增加文章的阅读时间和字数统计，并显示。
+#### `archives`
+_config.yml中设置该字段为 `true` 将会启用文章的时间归档功能。 
+#### `categories`
+_config.yml中设置该字段为 `true` 将会启用文章的归类功能。
+#### `gittalk`
+_config.yml中设置该字段为 `true` 将会增加gittalk评论模块。 
+#### `show_statistics`
+_config.yml中设置该字段为 `true` 将会启用网站访客统计功能，默认busuanzi引擎。
+#### `rss`
+_config.yml中设置该字段为 `true` 将会启用rss生成功能。 
+#### `source_code` 
+_config.yml中设置该字段为 `true` 将会增加源代码导引。
+
+## 包含文件
+该主题有一些必要的 「.html」文件来实现网站的功能，它们位于不同的文件夹中。
+
+#### `index.html`
+index.html 是主页的入口文件，生成在项目根目录 `/blog` 文件夹中。
+
+#### `archive.html`
+archive.html 实现文章的归档功能，生成在根目录 `/archive` 文件夹中。
+
+#### `category.html`
+category.html 实现文章的分类功能，生成在根目录 `/category` 文件夹中。
+
+#### `about.html`
+about.html 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，存在于根目录 `/about` 文件夹中。
+
+#### `pagination.html`
+pagination.html 实现网站的分页功能，存放在根目录 `_includes` 文件夹中。
+
+#### `reading_time.html`
+reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目录 `_includes` 文件夹中。
+
+#### `title.html`
+生成主页的功能菜单项, 存放在根目录 `_includes` 文件夹中。
+
+## 开发
+以下用于配置该主题的开发环境:
+
+1. 复制该主题的仓库到本地；
+2. 进入到该主题项目的根目录并执行`bundle install`。
+
+在你对该主题做了修改后可以在本地测试然后再推送到远端:
+
+1. 进入到该主题本地的根目录 (比如 jekyll-theme-rawposts)；
+2. 运行 `jekyll server` 构建该项目并生成网站，在浏览器中打开http://localhost:4000/你设定的baseurl 来预览网站。再度修改后可以通过刷新网页来预览效果。
+
+## Pull Requests
+当你需要提交一个 pull request时，可以：
+
+1. 复制该项目；
+2. 创建一个分支并对该分支起一个容易辨认的名字并填写好`问题`或者`需求描述`，`更改记录`；
+3. 在Github上提交该分支到一个 pull request。
+
+欢迎大家提 pull requests 给我, 对于每一个pull request, 我都会尽快review，对于好的建议我都会merge进该主题的代码中，包括但不限于提交问题或需求，修复代码等。
+
+## 版本
+1.0.0
+
+## 问题和回答
+如果你有针对该主题的任何问题，欢迎提交Issue来交流，每个问题我都会认真回复。:smile: 
+
+## 贡献
+主题基于 [plainwhite](https://github.com/samarsault/plainwhite-jekyll) 模板生成，做了大量的修改，增加了功能。
+
+## 协议
+该主题为开源软件，基于MIT协议。
