@@ -124,14 +124,10 @@ When submitting a pull request:
 Welcome to submitting pull requests to me, for each request, I will review as soon as possible and merge any good submits.
 
 ## Version
-1.0.0
+2.1.0
 
 ## Q & A
 Welcome raise issues if you have any questions about this theme, not limited for any usage, bug fix, new features requirements... :smile:   
-
-## Contribution
-The theme is generated based on [plainwhite](https://github.com/samarsault/plainwhite-jekyll), with a lot of modifications.
-
 ## License
 The theme is available as open source under the terms of the MIT License.
 
@@ -262,13 +258,10 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 欢迎大家提 pull requests 给我, 对于每一个pull request, 我都会尽快review，对于好的建议我都会merge进该主题的代码中，包括但不限于提交问题或需求，修复代码等。
 
 ## 版本
-1.0.0
+2.1.0
 
 ## 问题和回答
 如果你有针对该主题的任何问题，欢迎提交Issue来交流，每个问题我都会认真回复。:smile: 
-
-## 贡献
-主题基于 [plainwhite](https://github.com/samarsault/plainwhite-jekyll) 模板生成，做了大量的修改，增加了功能。
 
 ## 协议
 该主题为开源软件，基于MIT协议。

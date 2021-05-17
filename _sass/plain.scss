@@ -2,8 +2,8 @@
 @import "ext/normalize";
 @import "syntax";
 
-$linkColor: #4183c4;
-$btnColor: #4183c4;
+$linkColor: #0366d6;
+$btnColor: #0366d6;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -77,7 +77,7 @@ main {
     display: flex;
     height: 100vh;
 	padding-top: 10vh;
-    padding-bottom: 5vh;
+    padding-bottom: 0vh;
     @media screen and (max-width: $mobileW) {
       height: auto;
       padding: 10vh 0;
@@ -108,6 +108,13 @@ main {
       white-space: pre-wrap;
       line-height: normal;
     }
+	.tagline-small {
+		font-family: 'Raleway', 'Arial', 'Microsoft Yahei', sans-serif;
+		color: #aaa;
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
     img {
       max-width: 150px;
     }
@@ -122,6 +129,11 @@ main {
         flex-direction: column;
         align-items: center;
         margin-bottom: 17px;
+		.title-meta{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
       }
     }
   }
@@ -141,6 +153,52 @@ main {
   font-size: 10px;
   color: #222;
   text-align: center;
+}
+.icon-box-container {
+	  width: 140px;
+	  margin: 10px 0;
+}
+.icon-box {
+	padding: 7px 5px;
+	border-bottom: 1px dashed #D5DBDB ;
+	
+	a {
+		text-decoration: none;
+		font-size: 18px;
+		color: #000;
+		span {
+			font-size: 15px;
+			padding-left: 10px;
+			display: inline;
+		}
+		&:hover {
+			color: $linkColor;
+			cursor: pointer;
+		}
+	}
+}
+.togglemode {
+	font-family: "fontello";
+	font-size: 18px;
+	span {
+		font-family: Roboto, Arial, 'Microsoft Yahei', sans-serif;
+		
+		font-size: 15px;
+		padding-left: 10px;
+		display: inline;
+	}
+}
+.dark-mode:before {
+	content:'\e80e';
+	margin-right: 7px;
+}
+.light-mode:before {
+	content:'\e80b';
+	margin-right: 7px;
+}
+.social-container {
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .social {
   list-style-type: none;
@@ -195,6 +253,7 @@ main {
 	white-space: pre;
 	line-height: 1.9em;
 	color: #666;
+	width: 160px;
 }
 
 .readingtime-categories {
@@ -230,6 +289,11 @@ main {
     align-items: baseline;
 	align-content:stretch;
   }
+}
+.readingtime-box {
+	display: flex;
+	flex-direction:row;
+	justify-content: flex-start;
 }
 .navigation-meta {
   display: flex;
@@ -329,7 +393,7 @@ main {
     text-decoration: none;
     font-size: 12px;
     background: #e1ecf4;
-	color:#39739d;
+	color:$linkColor;
 	border: 1px solid #e1ecf4;
     padding: .4em .5em;
     border-radius: 3px;
@@ -493,6 +557,7 @@ main {
 		text-decoration: none;
 		
 		span {
+			color: #ffffff;
 			font-family: Roboto, sans-serif;
 			vertical-align:super;
 			font-size: 10px;
@@ -586,7 +651,7 @@ main {
    @media screen and (max-width: $mobileW) {
     padding: 0 !important;
     margin-top: 0;
-    max-width: $mobileW
+    max-width: $mobileW;
   }
 }
 .post-fix-width {
@@ -594,7 +659,7 @@ main {
   flex-shrink: 2; /* default 1 !important guarantee the post contents width constant */
   flex-grow: 1;
   @media screen and (min-width: $mobileW + 1) {
-       max-width: 80%; /* fix the width */
+       max-width: 85%; /* fix the width */
 	   min-width: 100px;
        width: 100%;
    }
@@ -648,15 +713,6 @@ main {
     &:hover {
 		border-bottom: 0.5px solid $linkColor;
     }
-  }
-  span {
-			margin: 0 0px;
-			font-size: 14px;
-			padding: 4px 4px;
-			white-space: nowrap;
-			color: #c7254e;
-			background-color: #f9f2f4;
-			border-radius: 4px;
   }
 }
 .about-page-meta{
@@ -758,6 +814,9 @@ main {
   margin-bottom: 36px;
   text-decoration: none;
   min-width: 100px;
+  @media screen and (max-width: $mobileW) {
+		margin: 0px;
+  }
 }
 .menu-logo {
   font-family: 'Poppins', 'Arial', 'Microsoft Yahei', sans-serif;
@@ -765,6 +824,10 @@ main {
   font-weight:900;
   color:#222;
   margin-right: 100px;
+  margin-top: 20px;
+  @media screen and (max-width: $mobileW) {
+		display: none;
+  }
 }
 .menu-btn-box {
   @media screen and (min-width: $mobileW +1px) {
@@ -774,7 +837,7 @@ main {
 .menu-btn {
 	font-family: "fontello";
     padding: 8px;
-    font-size: 22px;
+    font-size: 26px;
 	background-color: #fff;
     text-decoration: none;
 	color: #222;
@@ -833,11 +896,12 @@ main {
   width: 340px;
   font-weight:400;
   color:#222;
+  margin-top: 20px;
   @media screen and (max-width: $mobileW) {
 		display: none;
   }
   a {
-    transition: color 0.3s;
+    transition: color 0.2s, border-bottom 0.2s;
 	text-decoration: none;
 	text-align: center;
 	border-bottom: 2px solid #ffffff;
@@ -913,7 +977,7 @@ blockquote {
   font-size: 15px;
   border-radius: 2px;
   padding: 15px 15px;
-  margin: 0 5px;
+  margin: 1rem 5px;
   position: relative;
   box-shadow: 1px 1px 2px 1px #d8d8d8;
 }
@@ -951,7 +1015,7 @@ pre {
   border-radius: 4px;
 }
 table {
-  margin: auto;
+  margin: 30px auto;
   border-radius: 2px;
   border-collapse: collapse;
   border-style:hidden;
@@ -983,7 +1047,7 @@ table {
 }
 .center-image
 {
-    margin: 27px auto;
+    margin: 30px auto;
     display: block;
 	border-radius: 4px;
 	
@@ -1042,9 +1106,11 @@ table {
   margin-left: 0px;
   font-weight: 400;
   color: #000;
-
+  p {
+	margin:0;
+  }
   a{
-	padding: 0px 10px;
+	padding: 2px 2px;
     width: 100%;
 	height: 100%;
 	display: block;
@@ -1218,10 +1284,10 @@ table {
 	}
 }
 .post-note {
-    margin-top: 2rem;
-	margin-bottom: 2rem;
-	padding-top: 20px;
-	padding-bottom: 20px;
+    margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -1305,19 +1371,24 @@ table {
 
 
 @media screen and (max-width: $mobileW) {
+	
   .about.condensed {
-      display: none;
+      margin:30px 0;
+	  padding:0;
     } 
   .about {
     .about-header.condensed {
       align-items: start;
       align-self: start;
-	  margin-left: 30px;
+	  margin-left: 19px;
+	  margin-bottom: 0;
+	  padding-bottom:0;
       .about-title {
         flex-direction: row;
+		align-items: flex-end;
         margin-bottom: 0px;
         img {
-          max-height: 40px;
+          max-height: 60px;
         }
         h2 {
           margin: 0 10px;
@@ -1326,7 +1397,13 @@ table {
       .tagline {
         font-size: 16px;
         margin-bottom: 0px;
+		display: none;
       }
+	  .tagline-small {
+		display: block;
+		margin: 5px 10px 6px 10px;
+		font-size: 12px;
+	  }
     }
     .about-footer.condensed {
       display: none;

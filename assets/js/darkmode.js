@@ -30,20 +30,26 @@ if ( (theme === null && userPrefersDark) || theme === 'dark') {
     function checkDark() {
         if (!checkDarkDone) {
             toggleDarkMode();
+			$('.dark-mode').toggleClass('light-mode');
+			if (document.getElementById("mode").innerHTML=="Light Mode")
+				document.getElementById("mode").innerHTML="Dark Mode";
+			else 
+				document.getElementById("mode").innerHTML="Light Mode";
         }
         checkDarkDone = true;
     };
-
+	/* switcher has been removed, so comment out this code temporarily
     function toggleSwitch() {
 		//document.querySelectorAll('.dark-mode-toggle').forEach(ti => ti.checked = true);
 		var toggleInput = document.querySelector('#dark-mode-toggle');
         toggleInput.checked = true;
         
     };
-
+	*/
     // Attempt both requestAnimationFrame and DOMContentLoaded, whichever comes first.
     if (window.requestAnimationFrame) window.requestAnimationFrame(checkDark);
     window.addEventListener('DOMContentLoaded', checkDark);
-    if (window.requestAnimationFrame) window.requestAnimationFrame(toggleSwitch);
-    window.addEventListener('DOMContentLoaded', toggleSwitch);
+	// Remove toggleSwitch but reserve for future use. 
+    //if (window.requestAnimationFrame) window.requestAnimationFrame(toggleSwitch);
+    //window.addEventListener('DOMContentLoaded', toggleSwitch);
 }
