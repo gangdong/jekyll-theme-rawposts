@@ -2,8 +2,8 @@
 layout: post
 title:  "关于本博客模板使用上的一些问题"
 date:   2019-02-23 12:21:47 +0800
-categories: Pinned
-tags: Pinned
+categories: Blog Web Github
+tags: Blog Web Github
 Published: true
 toc: true
 sidebar: true
@@ -20,12 +20,8 @@ keywords: rawposts/模板
 ## <span id ="1">1.关于该主题</span>
 `rawposts` 是一款轻量级,风格简洁清新的Jekyll主题。 该主题配置简单并支持丰富的特性,你可以将它用于Jekeyll网站或者个人博客的构建。该主题可以被用于部署在`Github Pages`上。
 
-[作者]：[DavidDong](https://github.com/gangdong)       
-[协议]：MIT 
-
-
 ### 预览
-![screenshot]({{site.cdn_baseurl}}/assets/screenshot.png)
+![screenshot]({{site.cdn_baseurl}}/assets/screenshot.png){: .center-image }
 
 ## <span id ="2">2.功能</span>
 + 响应式设计
@@ -153,8 +149,7 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 在你对该主题做了修改后可以在本地测试然后再推送到远端:
 
 1. 进入到该主题本地的根目录 (比如 jekyll-theme-rawposts)；
-2. 运行 `jekyll server` 构建该项目并生成网站，在浏览器中打开 `http://localhost:4000/你设定的baseurl` 来预览网站。再度修改后可以通过刷新网页来预览效果。
-   如果想要看主题的默认效果，链接路径为 `http://localhost:4000/blog/index.html` 
+2. 运行 `jekyll server` 构建该项目并生成网站，在浏览器中打开http://localhost:4000/你设定的baseurl 来预览网站。再度修改后可以通过刷新网页来预览效果。
 
 ### <span id = "6.2">6.2 Pull Requests</span>
 当你需要提交一个 pull request时，可以：
@@ -167,12 +162,9 @@ reading_time.html 统计文章的字数和阅读时间并显示. 存放在根目
 
 ## <span id = "7">7.其他信息</span>
 ### <span id = "7.1">7.1 版本</span>
-1.0.0
+2.0.0
 
-### <span id = "7.2">7.2 贡献</span>
-主题起始于 [plainwhite](https://github.com/samarsault/plainwhite-jekyll) 模板，在此基础上做了大量的修改，添加了功能。
-
-### <span id = "7.3">7.3 协议</span>
+### <span id = "7.3">7.2 协议</span>
 该主题为开源软件，基于`MIT`协议。
 
 ## <span id = "8">8.问题和回答 (Q&A)</span>
