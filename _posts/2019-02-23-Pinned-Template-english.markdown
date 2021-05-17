@@ -22,6 +22,9 @@ The latest release is [v2.0](https://github.com/gangdong/jekyll-theme-rawposts/r
 ## Preview
 ![screenshot](https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/screenshot.png){: .center-image }
 
+## Live Demo
+[dqdongg.com](https://dqdongg.com)
+
 ## Features List
 + Fully responsive
 + Optimized for tablets & mobiles
@@ -155,4 +158,4 @@ Welcome raise issues if you have any questions about this theme, not limited for
 ## License
 The theme is available as open source under the terms of the `MIT` License. 
 <br><br>
-[中文 ->](https://dqdongg.com/blog/web/github/2019/02/22/Blog-Template.html)
+[中文 ->](/blog/web/github/2019/02/23/Blog-Template.html)

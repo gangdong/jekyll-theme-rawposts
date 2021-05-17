@@ -23,6 +23,10 @@ keywords: rawposts/模板
 ### 预览
 ![screenshot]({{site.cdn_baseurl}}/assets/screenshot.png){: .center-image }
 
+### 网站演示
+
+[dqdongg.com](https://dqdongg.com)
+
 ## <span id ="2">2.功能</span>
 + 响应式设计
 + 针对平板&手机屏幕设计优化
