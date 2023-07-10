@@ -7,9 +7,9 @@ email: dqdongg@hotmail.com
 description: "This is a free jekyll portfolio-style theme. To be simple, light & clean! "
 keywords: "Jekyll Theme, 主题 rawpost"
 show_excerpts: true # set to true to show excerpts on the homepage
-url: ''
+url: 'https://dejjon.netlify.app'
 baseurl: ''
-repository: gangdong/gangdong.github.io
+repository: github.com/Juan-Jones/jekyll-theme-rawposts
 cdn_baseurl: https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
