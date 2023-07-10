@@ -3,8 +3,10 @@
 source "http://rubygems.org"
 gemspec
 group :jekyll_plugins do
+    gem 'jekyll-sass-converter'
     gem 'jekyll-feed'
     gem 'jekyll-sitemap'
+    gem 'github-pages'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
     gem 'jekyll-archives'

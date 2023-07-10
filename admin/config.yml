@@ -1,0 +1,455 @@
+backend:
+  name: github
+  repo: juan-jones/jekyll-theme-rawposts # Path to your GitHub repository
+  branch: master # Branch to update (master by default)
+  site_domain: https://dejjon.nelify.app #Your site on netlify
+  use_graphql: true
+
+publish_mode: editorial_workflow
+show_preview_links: true
+display_url: https://dejjon.nelify.app
+logo_url: https://yoursite.netlify.app/uploads/logo.jpg
+
+# Do NOT edit below this line unless you want to change the home page
+
+media_folder: "uploads" # Media files will be stored in the repo under /uploads
+public_folder: "../uploads"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    label_singular: "Post"
+    folder: "_posts/" # The path to the folder where the documents are stored
+    editor:
+      preview: false
+    description: "These are your existing blog posts. Click -New Post- to create a new post."
+    create: true # Allow users to create new documents in this collection
+    media_folder: "/uploads"
+    public_folder: "../uploads"
+    summary: "{{title}} - {{day}}/{{month}}/{{year}}"
+    preview_path: "{{year}}/{{month}}/{{day}}/{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+          hint: "This image will appear at the top of your post in the listing but over the feature image on the article's page.",
+        }
+      - {
+          label: "Title text colour over the feature image",
+          name: "title_color",
+          widget: "color",
+          required: false,
+          default: "#ffffff",
+          hint: "The text is white by default, but you can change the colour to get more contrast against the image.",
+        }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - {
+          label: "Comments",
+          name: "comments",
+          widget: "boolean",
+          default: false,
+          required: false,
+          hint: "Only if you setup your Disqus account will this allow comments. If you don't want comments for this post then turn this off.",
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "You can type straight into this field and use the toolbar to select styles. You can also use markdown directly when you switch this off. In markdown mode, you can also add HTML.",
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          max: 5,
+          options:
+            [
+              "Architecture",
+              "Art",
+              "Books",
+              "Buildings",
+              "Cinema",
+              "Culture",
+              "Design",
+              "Education",
+              "Fashion",
+              "Fonts",
+              "Graphics",
+              "History",
+              "Journalism",
+              "Landscape",
+              "Life",
+              "Literature",
+              "Magazines",
+              "Media",
+              "Music",
+              "Nature",
+              "Packaging",
+              "Personal",
+              "Photography",
+              "Publishing",
+              "Retail",
+              "Science",
+              "Signage",
+              "Transport",
+              "Travel",
+              "TV",
+              "Work",
+            ],
+          required: false,
+          hint: "By adding tags the posts can be listed together under that tag. You will need to enable the tags page (by turning on show on menu for the tags page.",
+        }
+
+  - name: "pages"
+    label: "Pages" # Used in the UI
+    label_singular: "Page"
+    description: "These are seperate pages from the blog. Not date ordered, but simply available from the menu if you turn that setting on."
+    folder: "pages/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    delete: false
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "../uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+          hint: "This image will appear at the top of your post in the listing but over the feature image on the page.",
+        }
+      - {
+          label: "Subtitle",
+          name: "subtitle",
+          widget: "string",
+          required: false,
+          hint: "This will show under the heading for the page.",
+        }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Show on the menu?",
+          name: "show",
+          widget: "boolean",
+          default: false,
+          hint: "If this is switched on, the link will show on the menubar to the right.",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "page"
+
+  # uncomment out the following collection block if you want to create a new pages inside the content block. DO NOT UNCOMMENT this paragraph!
+
+  - name: "content"
+    label: "Content - Further Pages" # Used in the UI
+    label_singular: "Content Page"
+    description: "This is where you add another section to your site - maybe recipes or photos. The pages will be styled with the content.css file so you need to edit this for your own styling."
+    folder: "_content/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    delete: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "../uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options:
+          - { label: "Standard Page", value: "page" }
+          - {
+              label: "Unstyled, you can use the content.css file to style yourself.",
+              value: "content",
+            }
+
+  # uncomment out the following collection block if you want to use a home page rather than the blog on the home page. This needs to be done after you have changed the settings in the _config.yml file in the root of your project. DO NOT UNCOMMENT this paragraph!
+
+  # - name: "homepageitems"
+  #   label: "Home Page Blocks" # Used in the UI
+  #   label_singular: "Block"
+  #   description: "You can have up to 4 blocks on the home page with an image and some text. You cannot add any here but you can unpublsh any of the 4. To edit the home page main text and image, edit the page called home in the pages."
+  #   folder: "_homepageitems/" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   delete: true
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   media_folder: "/uploads"
+  #   public_folder: "../uploads"
+  #   editor:
+  #     preview: false
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Publish Date", name: "date", widget: "datetime" }
+  #     - {
+  #         label: "Featured Image",
+  #         name: "image",
+  #         widget: "image",
+  #         required: false,
+  #       }
+  #     - { label: "Body", name: "body", widget: "markdown" }
+
+  - label: "Settings"
+    name: "data"
+    show_preview_links: false
+    description: "These are the general settings for the site. This includes the name and description of your blog and your banner image and logo."
+    editor:
+      preview: false
+    files:
+      - label: "General Settings for your Web site"
+        name: "general"
+        file: "_data/settings.yml"
+        fields:
+          - label: "Title of the Site"
+            name: "title"
+            widget: "string"
+            required: true
+            hint: "A short title of the site to be displayed top left. Yes, keep this short!"
+          - label: "Description"
+            name: "description"
+            widget: "string"
+            hint: "This is used in the metadata of the site. Good for search engines."
+            required: false
+          - label: "Text in the Footer"
+            name: "footer_text"
+            widget: "string"
+            required: true
+            hint: "You can put the copyright info in here"
+          - label: "Home Page Image"
+            name: "header_feature_image"
+            widget: "image"
+            allow_multiple: false
+            hint: "This image will show on the home page. It needs to be a minimum of 1000 pixels wide."
+            required: false
+          - label: "Text in the Home page Banner Image"
+            name: "header_text"
+            widget: "string"
+            required: false
+            hint: "This will appear above the main image on the home page."
+          - label: "Colour of the text in the banner (default is white)."
+            name: "header_text_color"
+            widget: color
+            required: false
+            default: white
+            hint: "Choose a color that will contrast to the Home Page Image."
+          - label: "Height of Home Page Image"
+            name: "bannerheight"
+            widget: "select"
+            options:
+              - { label: "Shallow", value: "10vmax" }
+              - { label: "Normal", value: "20vmax" }
+              - { label: "Deep", value: "40vmax" }
+              - { label: "Very Deep", value: "50vmax" }
+              - { label: "Very Very Deep", value: "60vmax" }
+              - { label: "Hero", value: "100vh" }
+            hint: "You can choose to have the home page banner image deep but remember the image needs to be high enough originally to fill the space. The height is NOT fixed but responsive and relative to the size of the viewport. If you choose a shallow setting then the optional text may not fit into that space. If you see green colour strips above and below the image, then your banner image is not high enough for your chosen setting. If you choose Hero, the image will fill the home page initially; in this case you will need a header text. It is advised that you fix the Navigation bar when choosing Hero."
+          - label: "Height of Navigation menubar"
+            name: "navbarheight"
+            widget: "select"
+            options:
+              - { label: "Shallow", value: "35px" }
+              - { label: "Normal", value: "55px" }
+              - { label: "Deep", value: "85px" }
+            hint: "You have 3 choices for the menubar. The logo at the left will almost fill the height so make sure this isn't too small (it will resize to fit). Also make sure this logo isn't too long otherwise you may run out of width for the menu items."
+
+          - label: "Logo Image top left"
+            name: "logo"
+            widget: "image"
+            allow_multiple: false
+            hint: "Note: You are simply replacing this image with the same name. Do NOT rename. This image will show on all pages. It needs to be a maximum of 70 pixels square."
+            required: true
+          - label: "Favicon"
+            name: "favicon"
+            widget: "image"
+            allow_multiple: false
+            hint: "This needs to be an ICO type image. Note: You are simply replacing this ico file with the same name. Do NOT rename."
+            required: false
+          - label: "Grid Layout"
+            name: "gridlayout"
+            widget: "boolean"
+            required: false
+            hint: "You can choose to show the posts on the home page in a grid rather than just lined up vertically."
+
+          - label: "Fix the navigation bar to the top of the page?"
+            name: "fixednavbar"
+            widget: "boolean"
+            required: false
+            hint: "If you turn this on, the navbar at the top of all pages will be fixed and the content will flow underneath as it scrolls."
+
+          - label: "Image Enlargement"
+            name: "upzoom"
+            widget: "boolean"
+            default: true
+            hint: "Images in the content will enlarge when clicked. You can turn this off if you prefer."
+
+          - label: "Add Menu Items for the top bar"
+            name: "items"
+            widget: "list"
+            hint: "Add items here for the menubar at the top right of your site."
+            collapsed: false
+            show_preview_links: false
+            fields:
+              - label: "Site Name"
+                name: "name"
+                widget: "string"
+              - label: "Link"
+                name: "siteurl"
+                hint: "If this is an external link paste in the complete URL"
+                widget: "string"
+              - label: "Open in tab"
+                name: "tab"
+                widget: "boolean"
+                hint: "You can optionally select to have this link open in a seperate windows or tab."
+                required: false
+
+      - label: "Select typefaces for body and headings"
+        name: "typography"
+        show_preview_links: false
+        file: "_data/typography.yml"
+        hint: "You just have a few choices that are embedded from Google Fonts. Turn this off if you want to take control by editing the typography.css yourself. The default styles will be headings with a slab serif typeface (Roboto Slab) and the body text with a serif typeface (Source Serif Pro). Please search Google Fonts to see how these fonts display."
+        fields:
+          - label: "Set to false if you prefer to edit the CSS yourself"
+            name: "userselection"
+            widget: "boolean"
+            default: true
+          - label: "Font to use in the body text (paragraphs etc)"
+            name: "body"
+            widget: "select"
+            options:
+              [
+                "Source Serif Pro",
+                "Source Sans Pro",
+                "Roboto Slab",
+                "Josefin Sans",
+                "Alegreya",
+                "Montserrat",
+                "Libre Baskerville",
+              ]
+            default: ["Source Serif Pro"]
+            hint: "This would normally be a sans serif or serif but not slab serif."
+          - label: "Font to use in the headings"
+            name: "headings"
+            widget: "select"
+            options:
+              [
+                "Source Serif Pro",
+                "Source Sans Pro",
+                "Roboto Slab",
+                "Josefin Sans",
+                "Alegreya",
+                "Bevan",
+                "Montserrat",
+                "Libre Baskerville",
+              ]
+            default: ["Roboto Slab"]
+            hint: "You can choose any of these for the headings; Bevan is a display font."
+
+      - label: "Add your Social Media accounts here"
+        name: "social"
+        hint: "By adding your accounts in here, your site visitors will see icons that will take them to your other digital locations such as Facebook and Twitter."
+        show_preview_links: false
+        file: "_data/social.yml"
+        fields:
+          - label: "Your Twitter Account"
+            name: "twitter"
+            widget: "string"
+            hint: "Do not include the @ sign"
+            required: false
+          - label: "Your Instagram"
+            name: "instagram"
+            widget: "string"
+            required: false
+          - label: "Your Facebook page"
+            name: "facebook"
+            widget: "string"
+            required: false
+          - label: "Your Disqus account for people to comment"
+            name: "disqus_shortname"
+            widget: "string"
+            required: false
+            hint: "Once you have a disqus account you can put the short name in here."
+          - label: "Do you have a Flickr account?"
+            name: "flickr"
+            widget: "string"
+            required: false
+          - label: "How about Soundcloud"
+            name: "soundcloud"
+            widget: "string"
+            required: false
+          - label: "Here you can add your Pinterest account"
+            name: "pinterest"
+            widget: "string"
+            required: false
+          - label: "Do you have a YouTube channel?"
+            name: "youtube"
+            widget: "string"
+            required: false
+            hint: "Put your YouTube channel here"
+          - label: "Tumblr"
+            name: "tumblr"
+            widget: "string"
+            required: false
+            hint: "If you have Tumblr put it here"
+          - label: "LinkedIn"
+            name: "linkedin"
+            widget: "string"
+            required: false
+            hint: "If you have a LinkedIn network put it here"
+          - label: "You can add your own Email Adress here"
+            name: "email_address"
+            widget: "string"
+            pattern: ["@", "Must be a valid email address"]
+            required: false
+          - label: "GitHub"
+            name: "github"
+            widget: "string"
+            required: false
+            hint: "Put your Github repo in here and then people can see your code. You just need the username and repo name like this  `username/myrepo`"
+
+      - label: "Turn on some share buttons"
+        name: "share_buttons"
+        show_preview_links: false
+        file: "_data/share_buttons.yml"
+        hint: "Switch on these Social media buttons so people can share your posts"
+        fields:
+          - label: "Share on Twitter"
+            name: "twitter"
+            widget: "boolean"
+            required: false
+          - label: "Share to Instagram"
+            name: "instagram"
+            widget: "boolean"
+            required: false
+          - label: "Share to Facebook"
+            name: "facebook"
+            widget: "boolean"
+            required: false
+          - label: "Share to Tumblr"
+            name: "tumblr"
+            widget: "boolean"
+            required: false
+          - label: "Share to Pinterest"
+            name: "pinterest"
+            widget: "boolean"
+            required: false
