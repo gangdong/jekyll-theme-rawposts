@@ -81,22 +81,33 @@ rawposts:
 #header_pages:
 # - about.md
 
-# Build settings
-theme: rawposts
+# BUILD SETTINGS
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  parse_block_html: true
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'codehilite'
+    # span:
+    #   line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+permalink: pretty
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-seo-tag, jekyll-toc, jekyll-tagging-related_posts, jekyll/tagging, jekyll-feed, jemoji, jekyll-seo-tag]
+exclude: [".jekyll-cache", "Gemfile", "README.md"]
+github: [metadata]
+# if you want the blog to be below the home page through a link  - comment out the following line and then remove the hashes from the next 2 lines. In other words you want to include the blog/index and exclude the index on the home page.
+exclude: ["blog/index.html"]
+# paginate_path: "blog/page:num"
+# exclude: ["index.html"]
 
-#rawposts:
-#  navigation:
-#    - title: My Work
-#      url: "/my-work"
-#    - title: Resume
-#      url: "/resume"
-#kramdown:
-#  input:          GFM
-#  syntax_highlighter: rouge
-#  syntax_highlighter_opts:
-#    line_numbers:  false
-#    line_number_start: 1
-#    default_lang: c
+# Note you will then want to add the blog to the menubar through the CMS
+# You should also UNCOMMENT the homepageitems section in the config.yml file inside the the admin folder
+
 #emoji:
   # The emoji's image host url, 'https://github.githubassets.com' (default).
   # The trailing can't end with '/', and it's can be setting to '' (empty string).
@@ -105,11 +116,3 @@ theme: rawposts
   # The emoji's image path of above host url, '/images/icons/' (default).
   # If it must start with '/' character, and it's can not be a empty string.
   #path: '/images/icons/'
-  
-plugins:
-  - jekyll-seo-tag
-  - jemoji
-  - jekyll-toc
-  - jekyll/tagging
-  - jekyll-tagging-related_posts
-#  - jekyll-feed
